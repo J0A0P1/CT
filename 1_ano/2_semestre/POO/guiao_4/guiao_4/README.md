@@ -1,0 +1,1 @@
+Resolução do guião pratico da aula 4.

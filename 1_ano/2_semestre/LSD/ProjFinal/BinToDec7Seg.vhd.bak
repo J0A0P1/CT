@@ -1,0 +1,113 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity BinToDec7binSEg is
+    port (
+        binary_in : in  std_logic_vector(6 downto 0);
+        decimal_out : out integer range 0 to 127
+    );
+end entity BinToDec7binSEg;
+
+architecture rtl of BinToDec7binSEg is
+begin
+
+    process (binary_in)
+    begin
+        case binary_in is
+            when "00000000" => decimal_out <= 0;
+            when "00000001" => decimal_out <= 1;
+            when "00000010" => decimal_out <= 2;
+            when "00000011" => decimal_out <= 3;
+            when "00000100" => decimal_out <= 4;
+            when "00000101" => decimal_out <= 5;
+            when "00000110" => decimal_out <= 6;
+            when "00000111" => decimal_out <= 7;
+            when "00001000" => decimal_out <= 8;
+            when "00001001" => decimal_out <= 9;
+            when "00001010" => decimal_out <= 10;
+            when "00001011" => decimal_out <= 11;
+            when "00001100" => decimal_out <= 12;
+            when "00001101" => decimal_out <= 13;
+            when "00001110" => decimal_out <= 14;
+            when "00001111" => decimal_out <= 15;
+            when "00010000" => decimal_out <= 16;
+            when "00010001" => decimal_out <= 17;
+            when "00010010" => decimal_out <= 18;
+            when "00010011" => decimal_out <= 19;
+            when "00010100" => decimal_out <= 20;
+            when "00010101" => decimal_out <= 21;
+            when "00010110" => decimal_out <= 22;
+            when "00010111" => decimal_out <= 23;
+            when "00011000" => decimal_out <= 24;
+            when "00011001" => decimal_out <= 25;
+            when "00011010" => decimal_out <= 26;
+            when "00011011" => decimal_out <= 27;
+            when "00011100" => decimal_out <= 28;
+            when "00011101" => decimal_out <= 29;
+            when "00011110" => decimal_out <= 30;
+            when "00011111" => decimal_out <= 31;
+            when "00100000" => decimal_out <= 32;
+            when "00100001" => decimal_out <= 33;
+            when "00100010" => decimal_out <= 34;
+            when "00100011" => decimal_out <= 35;
+            when "00100100" => decimal_out <= 36;
+            when "00100101" => decimal_out <= 37;
+            when "00100110" => decimal_out <= 38;
+            when "00100111" => decimal_out <= 39;
+            when "00101000" => decimal_out <= 40;
+            when "00101001" => decimal_out <= 41;
+            when "00101010" => decimal_out <= 42;
+            when "00101011" => decimal_out <= 43;
+            when "00101100" => decimal_out <= 44;
+            when "00101101" => decimal_out <= 45;
+            when "00101110" => decimal_out <= 46;
+            when "00101111" => decimal_out <= 47;
+            when "00110000" => decimal_out <= 48;
+            when "00110001" => decimal_out <= 49;
+            when "00110010" => decimal_out <= 50;
+            when "00110011" => decimal_out <= 51;
+            when "00110100" => decimal_out <= 52;
+            when "00110101" => decimal_out <= 53;
+            when "00110110" => decimal_out <= 54;
+            when "00110111" => decimal_out <= 55;
+            when "00111000" => decimal_out <= 56;
+            when "00111001" => decimal_out <= 57;
+            when "00111010" => decimal_out <= 58;
+            when "00111011" => decimal_out <= 59;
+            when "00111100" => decimal_out <= 60;
+            when "00111101" => decimal_out <= 61;
+            when "00111110" => decimal_out <= 62;
+            when "00111111" => decimal_out <= 63;
+            when "01000000" => decimal_out <= 64;
+            when "01000001" => decimal_out <= 65;
+            when "01000010" => decimal_out <= 66;
+            when "01000011" => decimal_out <= 67;
+            when "01000100" => decimal_out <= 68;
+            when "01000101" => decimal_out <= 69;
+            when "01000110" => decimal_out <= 70;
+            when "01000111" => decimal_out <= 71;
+            when "01001000" => decimal_out <= 72;
+            when "01001001" => decimal_out <= 73;
+            when "01001010" => decimal_out <= 74;
+            when "01001011" => decimal_out <= 75;
+            when "01001100" => decimal_out <= 76;
+            when "01001101" => decimal_out <= 77;
+            when "01001110" => decimal_out <= 78;
+            when "01001111" => decimal_out <= 79;
+            when "01010000" => decimal_out <= 80;
+            when "01010001" => decimal_out <= 81;
+            when "01010010" => decimal_out <= 82;
+            when "01010011" => decimal_out <= 83;
+            when "01010100" => decimal_out <= 84;
+            when "01010101" => decimal_out <= 85;
+            when "01010110" => decimal_out <= 86;
+            when "01010111" => decimal_out <= 87;
+            when "01011000" => decimal_out <= 88;
+            when "01011001" => decimal_out <= 89;
+            when "01011010" => decimal_out <= 90;
+            when others => decimal_out <= 0; -- Valor padrão caso o sinal de entrada não corresponda a nenhum dos casos anteriores
+        end case;
+    end process;
+
+end architecture rtl;

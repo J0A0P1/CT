@@ -1,0 +1,36 @@
+--Contador decrescente parametrizável 
+--Serve para evitar bibliotecas cheias de código desnecessário, pois em vez de ter 5/6 contadores decrescentes definidos, temos
+--apenas um codigo parametrizável, ou seja, um codigo de um contador decrescente que será possível especificar quando iniciado, podendo ter n contadores
+--com apenas esse código
+
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity DecCounter is
+    generic(
+        N : integer := 10
+    );
+    port(
+        clk : in std_logic;
+        reset : in std_logic;
+        enable : in std_logic;
+        count : out unsigned(N-1 downto 0)
+    );
+end entity DecCounter;
+
+architecture Behavior of DecCounter is
+    signal count_reg : unsigned(N-1 downto 0);
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            count_reg <= (others => '0');
+        elsif rising_edge(clk) then
+            if enable = '1' then
+                count_reg <= count_reg - 1;
+            end if;
+        end if;
+    end process;
+    count <= count_reg;
+end architecture Behavior;

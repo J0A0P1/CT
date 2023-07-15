@@ -1,0 +1,9 @@
+
+State Machine - |Schematic|ControloMaquinaFSM:ControloMaquinaFSM|estado_atual
+Name estado_atual.stop estado_atual.repouso estado_atual.cozer estado_atual.levedar estado_atual.amassar estado_atual.inicio 
+estado_atual.inicio 0 0 0 0 0 0 
+estado_atual.amassar 0 0 0 0 1 1 
+estado_atual.levedar 0 0 0 1 0 1 
+estado_atual.cozer 0 0 1 0 0 1 
+estado_atual.repouso 0 1 0 0 0 1 
+estado_atual.stop 1 0 0 0 0 1 
