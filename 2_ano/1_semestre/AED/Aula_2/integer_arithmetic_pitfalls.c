@@ -12,7 +12,7 @@ int main(void)
 {
   unsigned int i = 1;
   int j = -1;
-  int k = -2147483648;
+  int k = -2147483647; // 2^31 - 1 é o maior valor que um int pode ter
 
   printf("original i = %u\n",i);
   printf("original j = %d\n",j);
